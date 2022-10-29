@@ -5,16 +5,7 @@
         :contact="contact" 
         @submit:contact="updateContact" @delete:contact="deleteContact" 
     />
-    <!-- <ContactCard 
-        :contact="activeContact" /> 
-        <router-link :to="{
-            name: 'contact.edit', 
-            params: { id: activeContact._id }, 
-            }" > 
-            <span class="mt-2 badge badge-warning"> 
-                <i class="fas fa-edit"></i> Hiệu chỉnh
-            </span > 
-        </router-link> -->
+    
     <p>{{ message }}</p>
 </div>
 </template>
@@ -22,11 +13,9 @@
 <script>
  import ContactForm from "../components/ContactForm.vue";
  import ContactService from "../services/contact.service";
- import ContactCard from "../components/ContactCard.vue";
  export default {
      components: {
-         ContactForm,
-         
+         ContactForm,        
      },
      props: {
          id: {
